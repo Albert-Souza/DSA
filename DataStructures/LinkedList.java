@@ -3,13 +3,12 @@ package DataStructures;
 public class LinkedList<T> {
     private Node head;
 
-    public class Node {
-        T val;
-        Node next;
+    private class Node {
+        private T val;
+        private Node next;
     
         public Node(T val) {
             this.val = val;
-            this.next = null;
         }
     }
 

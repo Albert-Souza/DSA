@@ -4,6 +4,15 @@ public class LinkedQueue<T> {
     private Node head;
     private Node tail;
 
+    private class Node {
+        private T val;
+        private Node next;
+        
+        public Node(T val) {
+            this.val = val;
+        }
+    }
+
     public LinkedQueue() {
         head = null;
         tail = null;
@@ -36,19 +45,9 @@ public class LinkedQueue<T> {
         Node curr = head;
         System.out.print("[ ");
         while (curr != null) {
-            System.out.print(curr.val + " ");
+            System.out.print(curr.val + " -> ");
             curr = curr.next;
         }
         System.out.println("]");
-    }
-
-    private class Node {
-        private T val;
-        private Node next;
-        
-        public Node(T val) {
-            this.val = val;
-            this.next = null;
-        }
     }
 }

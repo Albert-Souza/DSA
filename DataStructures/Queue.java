@@ -10,7 +10,7 @@ public class Queue<T>{
     public Queue(int size) {
         data = (T[]) new Object[size];
         enqPosition = 0;
-        deqPosition = data.length;
+        deqPosition = size;
         this.size = 0;
     }
 
