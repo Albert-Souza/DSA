@@ -63,26 +63,4 @@ public class List<T> {
         }
         data = newData;
     }
-
-    public static void main(String[] args) {
-        List<Integer> list = new List<>();
-        list.append(0);
-        list.append(1);
-        list.append(2);
-        list.append(3);
-        list.append(4);
-        list.append(5);
-        list.append(6);
-
-        list.traversal();
-
-        list.put(7, 0);
-        list.put(8, 2);
-        list.put(9, 4);
-        list.put(10, 6);
-
-        list.traversal();
-
-        list.drop(0);
-    }
 }
