@@ -36,6 +36,7 @@ public class LinkedDeque<T> {
     }
 
     public T popLeft() {
+        if (left == null) {return null;}
         T val = left.val;
         left = left.next;
         if (left != null) {left.prev = null;} 
@@ -44,6 +45,7 @@ public class LinkedDeque<T> {
     }
 
     public T popRight() {
+        if (right == null) {return null;}
         T val = right.val;
         right = right.prev;
         if (right != null) {right.next = null;} 
@@ -52,10 +54,12 @@ public class LinkedDeque<T> {
     }
 
     public T peekLeft() {
+        if (left == null) {return null;}
         return left.val;
     }
 
     public T peekRight() {
+        if (right == null) {return null;}
         return right.val;
     }
 
